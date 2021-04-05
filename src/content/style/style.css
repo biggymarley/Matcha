@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 * {
   margin: 0;
@@ -26,15 +27,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  flex-direction: row;
+  width: 200%;
   height: 50vh;
   background-color: rgb(255, 255, 255);
+}
+.gridlist {
+  width: 2000px;
+  height: 100%;
+  overflow: auto;
 }
 .header {
   width: 100%;
@@ -80,13 +88,52 @@
   padding: 2.5px 5px;
 }
 
-.rev-footer{
-    display: grid;
-    place-content: center;
+.rev-footer {
+  display: grid;
+  place-content: center;
 }
-.countainer
+.countainer {
+  width: 90%;
+  height: 300px;
+  overflow: scroll;
+}
+
+.rev {
+  border: 2px solid black;
+  width: 250px;
+  height: 100px;
+  overflow: hidden;
+}
+
+
+.swip-left{
+  color: white;
+  /* font-family: "Varela Round", sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 110px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  padding-bottom: 20px;
+}
+
+.swip{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.create-but
 {
-    width: 90%;
-    height: 300px;
-    overflow: scroll;
+  width: 250px;
+  height: 50px;
+  background: linear-gradient(to right, #fd297b, #ff5864, #ff655b);
+  border-radius: 25px !important;
+  color: white !important;
+}
+.create-but:hover
+{
+  background: linear-gradient(to left, #fd297b, #ff5864, #ff655b) ;
 }
