@@ -35,12 +35,12 @@
 .Footer {
   display: flex;
   flex-direction: row;
-  width: 200%;
+  width: 100%;
   height: 50vh;
   background-color: rgb(255, 255, 255);
 }
 .gridlist {
-  width: 2000px;
+  /* width: 2000px; */
   height: 100%;
   overflow: auto;
 }
@@ -108,11 +108,10 @@
 
 .swip-left{
   color: white;
-  /* font-family: "Varela Round", sans-serif; */
   font-family: 'Roboto', sans-serif;
-  font-size: 110px;
-  font-weight: 900;
-  letter-spacing: 10px;
+  font-size: 90px;
+  font-weight: 200;
+  letter-spacing: 6px;
   padding-bottom: 20px;
 }
 
@@ -136,4 +135,30 @@
 .create-but:hover
 {
   background: linear-gradient(to left, #fd297b, #ff5864, #ff655b) ;
+}
+
+
+
+.signup{
+  width: auto
+}
+
+.signup-l
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.terms-actp
+{
+  font-size: 15px !important;
+}
+
+.dialog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
