@@ -4,8 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production nodemon index",
+    "dev": "cross-env NODE_ENV=development nodemon index"
   },
   "author": "khimya",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "env": "^0.0.2",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
 }
