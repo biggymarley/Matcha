@@ -4,7 +4,7 @@ import Header from "./content/Header.js";
 import "./content/style/style.css";
 import { Button, Select } from "@material-ui/core";
 import Login from "./content/Login.js";
-import React from "react";
+import {React, useState, useEffect} from "react";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -14,11 +14,31 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
-
+import axios from "axios";
 
 
 function App() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [Textdata ,setTextdata] = useState([]);
+
+
+useEffect(() => {
+  axios.get('http://www.randomtext.me/api/lorem/p-8/20-35')
+  .then(function (response) {
+    console.log(response.data);
+    setTextdata(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}, [])
+
+
+
+
+
+
+
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -140,7 +160,9 @@ function App() {
           </Button>
         </div>
       </div>
-      <Footer />
+      <Footer
+      data={Textdata}
+      />
     </div>
   );
 }

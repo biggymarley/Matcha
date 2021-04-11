@@ -6,38 +6,12 @@ import { useState, useEffect, React } from "react";
 
 
 
-function Footer() {
-  
-  // const [data , setData] = useState([]);
-  
-  // const options = {
-  //   method: 'GET',
-  //   url: 'https://loripsum.net/api/10/short'
-  // };
-  
-  // useEffect(() => {
-  //   axios.request(options).then(res => {
-  //     var parser = new DOMParser();
-	//     var doc = parser.parseFromString(res.data, 'text/html');
-  //     const fata = [...doc.body.children];
-  //     setData(fata);
-  //   }).catch(e => {
-  //     console.log(e);
-  //   })
-  // }, []);
+function Footer(props) {
 
   
   return (
-    <div className="Footer">
-      <GridList className="gridlist" cols={2}> 
-      {/* {
-        data.map((child) => (
-          <GridListTile className="tile" >
-            {<p className="rev" >{child.innerHTML}</p>}
-          </GridListTile>
-
-        ))} */}
-        </GridList>
+    <div className="Footer" >
+      <div dangerouslySetInnerHTML={{__html: props.data.text_out}} className="countainer"/>
     </div>
   );
 }

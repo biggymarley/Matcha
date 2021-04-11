@@ -38,6 +38,8 @@ body{
 .Footer {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 50vh;
   background-color: rgb(255, 255, 255);
@@ -95,10 +97,30 @@ body{
   place-content: center;
 }
 .countainer {
-  width: 90%;
+  display: flex;
+  justify-content: start;
+  width: calc(80vw + 1px);
   height: 300px;
-  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  column-gap: 20px;
+  margin:30px;
+  padding:5px
 }
+
+
+
+.countainer > p{
+  margin:5px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: calc(40vw - 1px) ;
+  border: 1px solid black;
+}
+
 
 .rev {
   border: 2px solid black;
@@ -164,3 +186,4 @@ body{
   justify-content: center;
   align-items: center;
 }
+
