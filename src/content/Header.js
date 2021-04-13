@@ -1,20 +1,17 @@
 import "./style/style.css";
 import Button from "@material-ui/core/Button";
-import { withStyles }  from '@material-ui/core/styles';
+import { withStyles } from "@material-ui/core/styles";
 // import { red } from "@material-ui/core/colors";
-
-
-
+import Login from "./Login.js";
 
 const ColorButton = withStyles((theme) => ({
   root: {
-    width: 'auto',
-    background : "white",
+    width: "auto",
+    background: "white",
   },
 }))(Button);
 
-
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <nav className="nav-bar">
@@ -30,10 +27,17 @@ function Header() {
           </svg>
           <h1>Matcha</h1>
         </div>
-        <ColorButton variant="contained" className="but">
-        <span className="log-but">
-          Log In
-        </span>  
+        <Login
+          open={props.open}
+          handleClickOpen={props.handleClickOpen}
+          handleClose={props.handleClose}
+        />
+        <ColorButton
+          variant="contained"
+          className="but"
+          onClick={props.handleClickOpen}
+        >
+          <span className="log-but">Log In</span>
         </ColorButton>
       </nav>
     </header>

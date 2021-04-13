@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body{
   width: 100%;
   height: 100%;
@@ -14,6 +15,13 @@ body{
 .body {
   width: 100%;
   height: 100%;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .body::before {
   content: "";
@@ -44,7 +52,7 @@ body{
   justify-content: center;
   width: 100%;
   height: 50vh;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 .gridlist {
   height: 100%;
@@ -102,7 +110,7 @@ body{
   display: flex;
   justify-content: flex-start;
   width: calc(80vw + 1px);
-  height: 300px;
+  height: 400px;
   overflow-x: auto;
   overflow-y: hidden;
   column-gap: 20px;
@@ -118,7 +126,7 @@ body{
   display: flex;
   align-items: center;
   text-align: center;
-  height: 100%;
+  height: 90%;
   width: calc(40vw - 1px) ;
   border: 1px solid black;
 }
@@ -139,6 +147,13 @@ body{
   font-weight: 200;
   letter-spacing: 6px;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 620px) {
+  .swip-left{
+    font-size: 10vw;
+  }
+
+  
 }
 
 .swip{
@@ -171,8 +186,9 @@ body{
 
 .signup-l
 {
+  height: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-e;
   align-items: center;
   flex-direction: column;
 
@@ -181,6 +197,7 @@ body{
 .terms-actp
 {
   font-size: 15px !important;
+  text-align: center;
 }
 
 .dialog{
@@ -189,3 +206,6 @@ body{
   align-items: center;
 }
 
+.MuiDialog-root{
+  width: 100% !important;
+}
