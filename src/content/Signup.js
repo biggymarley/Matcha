@@ -45,7 +45,7 @@ function Signup(props) {
           <div className="signup-l">
             <TextField
               autoFocus
-              margin="dense"
+              margin="normal"
               id="email"
               label="Email Address"
               type="email"
@@ -54,7 +54,7 @@ function Signup(props) {
             />
             <TextField
               autoFocus
-              margin="dense"
+              margin="normal"
               id="fname"
               label="First Name"
               type="text"
@@ -63,7 +63,7 @@ function Signup(props) {
             />
             <TextField
               autoFocus
-              margin="dense"
+              margin="normal"
               id="lname"
               label="Last Name"
               type="text"
@@ -88,7 +88,7 @@ function Signup(props) {
             <TextField
               autoFocus
               variant="outlined"
-              margin="dense"
+              margin="normal"
               id="pw"
               label="Password"
               type="password"
